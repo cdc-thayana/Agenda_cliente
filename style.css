@@ -125,7 +125,21 @@ input,select,textarea{
   font-weight:bold;
 }
 
+.rodape{
+  width:100%;
+  background:#b31217;
+  padding:20px 0;
+  margin-top:40px;
+}
+
+.rodape .container{
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+}
+
 .rodape p{
-  margin:5px 0;
+  margin:6px 0;
+
 
 }
