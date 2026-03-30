@@ -117,4 +117,15 @@ input,select,textarea{
   padding:20px;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  .rodape{
+  background:#b31217;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  font-weight:bold;
+}
+
+.rodape p{
+  margin:5px 0;
+
 }
