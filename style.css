@@ -1,44 +1,61 @@
+/* RESET E BASE */
 body{
   margin:0;
   font-family:Arial;
   background:#f5f7fb;
+
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
+main{
+  flex:1;
+}
+
+/* CONTAINER */
 .container{
   width:90%;
   max-width:1100px;
   margin:auto;
 }
 
+/* TOPO */
 .topbar{
   background:#fff;
   padding:15px;
   border-bottom:1px solid #ddd;
 }
 
+/* GRID PRINCIPAL */
 .hero-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
 
-.hero-copy, .hero-form{
+/* CARDS */
+.hero-copy,
+.hero-form{
   background:#fff;
   padding:25px;
   border-radius:20px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* TITULO */
 h1{
   font-size:36px;
 }
 
+/* IMAGENS */
 .img-box{
   width:100%;
   border-radius:12px;
   margin-top:10px;
 }
 
+/* CONSULTORA */
 .consultora-box{
   position:relative;
 }
@@ -52,13 +69,16 @@ h1{
   font-size:14px;
 }
 
+/* FORM */
 .form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
   width:100%;
   padding:12px;
   margin-top:10px;
@@ -66,6 +86,7 @@ input,select,textarea{
   border:1px solid #ccc;
 }
 
+/* RESULTADO */
 .result-box{
   background:#fff5f5;
   padding:15px;
@@ -74,6 +95,7 @@ input,select,textarea{
   border:1px solid #ffcccc;
 }
 
+/* BOTÕES */
 .buttons{
   display:flex;
   gap:10px;
@@ -102,6 +124,7 @@ input,select,textarea{
   color:#fff;
 }
 
+/* DEPOIMENTOS */
 .testimonials{
   margin-top:30px;
 }
@@ -117,22 +140,19 @@ input,select,textarea{
   padding:20px;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  .rodape{
-  background:#b31217;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  font-weight:bold;
 }
 
+/* RODAPÉ */
 .rodape{
   width:100%;
   background:#b31217;
-  padding:20px 0;
+  padding:25px 0;
   margin-top:40px;
 }
 
 .rodape .container{
+  max-width:1100px;
+  margin:auto;
   text-align:center;
   color:#fff;
   font-weight:bold;
@@ -140,6 +160,4 @@ input,select,textarea{
 
 .rodape p{
   margin:6px 0;
-
-
 }
