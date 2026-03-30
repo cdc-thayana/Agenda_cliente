@@ -11,14 +11,19 @@
 
 <header class="topbar">
   <div class="container topbar-inner">
+
     <div class="brand">
       <div class="brand-badge">🤖</div>
-      <div>
+      <div class="brand-text">
         <div class="brand-title">Atendimento para Crédito Planejado</div>
         <div class="brand-subtitle">Simulação rápida via WhatsApp</div>
       </div>
     </div>
-    <a class="btn btn-primary" href="#formulario">Simular agora</a>
+
+    <div class="top-action">
+      <a class="btn btn-primary" href="#formulario">Simular agora</a>
+    </div>
+
   </div>
 </header>
 
@@ -30,7 +35,6 @@
     <!-- ESQUERDA -->
     <div class="hero-copy">
 
-      <!-- FOTO CONSULTORA -->
       <div class="consultora-box">
         <img src="consultora.png">
         <p>Esperamos por você<br><strong>Presencial ou Online</strong></p>
@@ -38,11 +42,9 @@
 
       <h1>Simule o crédito e fale direto no WhatsApp</h1>
 
-      <!-- IMAGENS -->
       <img class="img-box" src="imovel1.png">
       <img class="img-box" src="veiculo.png">
 
-      <!-- PASSOS -->
       <div class="steps">
         <h3>Como funciona</h3>
         <p>1️⃣ Preencha seus dados</p>
@@ -122,6 +124,14 @@
 
 </main>
 
+<footer class="rodape">
+  <div class="container">
+    <p>Consultoria Thayana Vilaça</p>
+    <p>Agenda: (81) 92002-3267</p>
+    <p>E-mail: consultoriathayanavilaca@gmail.com</p>
+  </div>
+</footer>
+
 <script>
 function calcular(){
   let valor = document.getElementById("valor").value;
@@ -141,12 +151,6 @@ Valor: ${valor}`;
   window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
 }
 </script>
-<footer class="rodape">
-  <div class="container">
-    <p>Consultoria Thayana Vilaça</p>
-    <p>Agenda: (81) 92002-3267</p>
-    <p>E-mail: consultoriathayanavilaca@gmail.com</p>
-  </div>
-</footer>
+
 </body>
 </html>
