@@ -1,406 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atendimento Ademicon | Simule e fale no WhatsApp</title>
-  <meta name="description" content="Landing page para captação de leads com simulação de crédito e envio direto para o WhatsApp." />
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimento Ademicon</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <div class="brand-badge">🤖</div>
-        <div>
-          <div class="brand-title">Atendimento Ademicon</div>
-          <div class="brand-subtitle">Landing page com captação e envio direto para WhatsApp</div>
-        </div>
-      </div>
-      <div class="top-actions">
-        <div class="pill">📲 WhatsApp conectado</div>
-        <a class="btn btn-primary" href="#formulario">Quero simular agora</a>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <div class="brand-badge">🤖</div>
+      <div>
+        <div class="brand-title">Atendimento Ademicon</div>
+        <div class="brand-subtitle">Simulação rápida via WhatsApp</div>
       </div>
     </div>
-  </header>
+    <a class="btn btn-primary" href="#formulario">Simular agora</a>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">⚡ Atendimento rápido, bonito e com foco em conversão</div>
-          <h1>Simule o crédito do cliente e leve o lead direto para o seu WhatsApp.</h1>
-          <p class="lead">Esta versão da página foi desenhada para parecer mais profissional, gerar mais confiança e encurtar o caminho entre o interesse do cliente e a conversa com você. O visitante preenche os dados, visualiza a simulação e já abre o atendimento no WhatsApp com mensagem pronta.</p>
+<main>
 
-          <div class="hero-highlights">
-            <div class="highlight">
-              <strong>🎯 Mais conversão</strong>
-              <span>Estrutura de landing page com headline forte, CTA visível e visual mais premium.</span>
-            </div>
-            <div class="highlight">
-              <strong>📲 Lead organizado</strong>
-              <span>Nome, telefone, tipo, valor, prazo e observações seguem direto na mensagem.</span>
-            </div>
-            <div class="highlight">
-              <strong>🚀 GitHub Pages</strong>
-              <span>Site leve e estático, pronto para publicar sem precisar de hospedagem extra.</span>
-            </div>
-          </div>
+<section class="hero">
+  <div class="container hero-grid">
 
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#formulario">Simular atendimento</a>
-            <a class="btn btn-secondary" href="#depoimentos">Ver depoimentos</a>
-          </div>
+    <!-- ESQUERDA -->
+    <div class="hero-copy">
 
-          <div class="hero-note">Ideal para divulgar em bio do Instagram, anúncio, cartão digital e campanhas de tráfego que terminam em atendimento por WhatsApp.</div>
-        </div>
-
-        <div class="hero-form" id="formulario">
-          <h2 class="section-title">Simule e envie para o WhatsApp</h2>
-          <p class="section-subtitle">Preencha abaixo para gerar uma mensagem pronta no número de atendimento.</p>
-
-          <form id="leadForm">
-            <div class="field">
-              <label for="nome">Nome completo</label>
-              <input id="nome" name="nome" placeholder="Digite seu nome" required />
-            </div>
-
-            <div class="form-grid-2">
-              <div class="field">
-                <label for="telefone">WhatsApp do cliente</label>
-                <input id="telefone" name="telefone" placeholder="(81) 99999-9999" required />
-              </div>
-              <div class="field">
-                <label for="tipo">Tipo de simulação</label>
-                <select id="tipo" name="tipo" required>
-                  <option value="Imóvel">🏠 Imóvel</option>
-                  <option value="Veículo">🚗 Veículo</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-grid-2">
-              <div class="field">
-                <label for="valor">Valor do crédito</label>
-                <input id="valor" name="valor" type="number" min="1000" step="1000" placeholder="Ex.: 250000" required />
-              </div>
-              <div class="field">
-                <label for="prazo">Prazo</label>
-                <select id="prazo" name="prazo" required></select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="observacoes">Observações opcionais</label>
-              <textarea id="observacoes" name="observacoes" placeholder="Ex.: Melhor horário para contato, perfil do cliente, urgência..."></textarea>
-            </div>
-
-            <div class="result-box">
-              <div class="result-label">Parcela estimada</div>
-              <div class="result-value" id="resultadoParcela">R$ 0,00</div>
-              <div class="result-desc">Valor informativo para facilitar a conversa inicial e dar mais contexto ao atendimento.</div>
-            </div>
-
-            <div class="actions-grid">
-              <button type="button" class="btn btn-secondary" id="btnCalcular">Calcular simulação</button>
-              <button type="submit" class="btn btn-whatsapp">Enviar para WhatsApp</button>
-            </div>
-
-            <div class="hint">Ao clicar em <strong>Enviar para WhatsApp</strong>, a conversa abre já preenchida com os dados do lead.</div>
-          </form>
-
-          <div class="preview" id="previewMensagem">A prévia da mensagem aparecerá aqui automaticamente.</div>
-        </div>
+      <!-- FOTO CONSULTORA -->
+      <div class="consultora-box">
+        <img src="consultora.jpg">
+        <p>Esperamos por você<br><strong>Presencial ou Online</strong></p>
       </div>
-    </section>
 
-    <section class="banner-section">
-      <div class="container">
-        <div class="banner-panel">
-          <div class="banner-copy">
-            <h2>Banner de destaque para valorizar seu atendimento</h2>
-            <p>Adicionei uma área visual mais forte para dar aparência de campanha profissional. Esse espaço ajuda a segurar a atenção do visitante, reforçar autoridade e conduzir a pessoa para o formulário principal.</p>
-            <div class="disclaimer">Se você quiser, no próximo passo eu também posso trocar este banner por uma versão com foto, logo ou identidade visual da sua marca.</div>
-          </div>
+      <h1>Simule o crédito e fale direto no WhatsApp</h1>
 
-          <div class="banner-visual">
-            <div class="banner-tag">Estrutura pensada para WhatsApp</div>
-            <div class="banner-title">Atendimento mais bonito, claro e pronto para captar leads.</div>
-            <div class="banner-sub">Visual premium, CTA destacado e formulário integrado ao seu número para acelerar o contato comercial.</div>
+      <!-- IMAGENS -->
+      <img class="img-box" src="imovel1.png">
+      <img class="img-box" src="veiculo.png">
 
-            <div class="floating-stat">
-              <div class="stat-label">Canal principal</div>
-              <div class="stat-value">WhatsApp</div>
-            </div>
-
-            <div class="floating-rating">
-              <strong>⭐ Destaque visual</strong>
-              <span>Seções de banner, benefícios e confiança.</span>
-            </div>
-
-            <div class="floating-chat">
-              <strong>💬 Mensagem pronta</strong>
-              <span>Nome, telefone, tipo de crédito, prazo e observações vão direto para o atendimento.</span>
-            </div>
-          </div>
-        </div>
+      <!-- PASSOS -->
+      <div class="steps">
+        <h3>Como funciona</h3>
+        <p>1️⃣ Preencha seus dados</p>
+        <p>2️⃣ Escolha imóvel ou veículo</p>
+        <p>3️⃣ Informe o valor</p>
+        <p>4️⃣ Veja a simulação</p>
+        <p>5️⃣ Clique no botão</p>
+        <p>6️⃣ Fale no WhatsApp</p>
       </div>
-    </section>
 
-    <section class="features-section">
-      <div class="container">
-        <div class="section-head">
-          <h2>O que mudou nesta versão</h2>
-          <p>Além do formulário, a página agora tem mais presença visual, mais persuasão e mais seções de apoio para aumentar a confiança do visitante.</p>
-        </div>
-
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="icon-box">🎨</div>
-            <h3>Visual mais premium</h3>
-            <p>Nova composição com hierarquia melhor, botões mais fortes, blocos visuais e espaços mais elegantes para valorizar a oferta.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon-box">🧮</div>
-            <h3>Simulação mantida</h3>
-            <p>A lógica de cálculo para imóvel e veículo continua ativa, com prévia da mensagem e CTA para WhatsApp funcionando no mesmo fluxo.</p>
-          </article>
-          <article class="feature-card">
-            <div class="icon-box">🛡️</div>
-            <h3>Mais confiança</h3>
-            <p>Incluí seções de banner, benefícios, passo a passo e depoimentos para deixar a página mais convincente.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="steps-section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Como o lead entra em contato</h2>
-          <p>Fluxo simples para reduzir fricção e aumentar a chance de o visitante iniciar conversa.</p>
-        </div>
-
-        <div class="steps-grid">
-          <article class="step-card">
-            <div class="step-number">1</div>
-            <h3>Preenche os dados</h3>
-            <p>O cliente informa nome, WhatsApp, tipo de interesse, valor, prazo e observações no formulário principal.</p>
-          </article>
-          <article class="step-card">
-            <div class="step-number">2</div>
-            <h3>Visualiza a simulação</h3>
-            <p>A página calcula a parcela estimada e monta a mensagem de forma automática, sem complicação.</p>
-          </article>
-          <article class="step-card">
-            <div class="step-number">3</div>
-            <h3>Abre o WhatsApp</h3>
-            <p>Ao clicar no botão, o atendimento já abre no seu número com a conversa pronta para envio.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials-section" id="depoimentos">
-      <div class="container">
-        <div class="section-head">
-          <h2>Depoimentos</h2>
-          <p>Adicionei uma seção visual de depoimentos para aumentar prova social. Os textos abaixo estão como <strong>modelo ilustrativo</strong> e podem ser trocados pelos seus depoimentos reais depois.</p>
-        </div>
-
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="avatar">M</div>
-              <div>
-                <div class="testimonial-name">Modelo de cliente 1</div>
-                <div class="testimonial-role">Exemplo de depoimento</div>
-              </div>
-            </div>
-            <p>“Gostei muito da praticidade. Fiz a simulação, cliquei no botão e já consegui falar no WhatsApp sem perder tempo.”</p>
-            <div class="stars">★★★★★</div>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="avatar">A</div>
-              <div>
-                <div class="testimonial-name">Modelo de cliente 2</div>
-                <div class="testimonial-role">Exemplo de depoimento</div>
-              </div>
-            </div>
-            <p>“A página ficou clara e bonita. Passou confiança e deixou o atendimento muito mais rápido para começar.”</p>
-            <div class="stars">★★★★★</div>
-          </article>
-
-          <article class="testimonial-card">
-            <div class="testimonial-top">
-              <div class="avatar">R</div>
-              <div>
-                <div class="testimonial-name">Modelo de cliente 3</div>
-                <div class="testimonial-role">Exemplo de depoimento</div>
-              </div>
-            </div>
-            <p>“Achei fácil de usar no celular. Em poucos cliques eu já tinha enviado meus dados e seguido para o WhatsApp.”</p>
-            <div class="stars">★★★★★</div>
-          </article>
-        </div>
-
-        <div class="disclaimer">Para evitar inventar prova social real, deixei os depoimentos como modelos ilustrativos. Se você me mandar 3 depoimentos verdadeiros, eu substituo tudo com seu conteúdo real.</div>
-      </div>
-    </section>
-
-    <section class="faq-section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Perguntas rápidas do visitante</h2>
-          <p>Uma seção simples para quebrar objeções e deixar o site mais completo.</p>
-        </div>
-
-        <div class="faq-grid">
-          <article class="faq-card">
-            <h3>A simulação já é contratação?</h3>
-            <p>Não. A página faz uma estimativa para facilitar o primeiro atendimento comercial e orientar o próximo passo da conversa.</p>
-          </article>
-          <article class="faq-card">
-            <h3>Recebo o lead direto no meu WhatsApp?</h3>
-            <p>Sim. O site abre uma conversa no seu número com os dados principais já montados na mensagem.</p>
-          </article>
-          <article class="faq-card">
-            <h3>Funciona no celular?</h3>
-            <p>Sim. O layout foi pensado para funcionar bem em celular, tablet e computador.</p>
-          </article>
-          <article class="faq-card">
-            <h3>Posso trocar cores, textos e banner?</h3>
-            <p>Sim. A estrutura já está pronta para personalizar nome, identidade visual, imagens, depoimentos e CTA.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <div class="cta-copy">
-            <h2>Quer transformar visitantes em conversa no WhatsApp?</h2>
-            <p>Esta página já está preparada para captação rápida. Se você quiser, o próximo passo pode ser personalizar com sua marca, trocar os textos por versões mais comerciais e inserir depoimentos reais.</p>
-          </div>
-          <a class="btn btn-dark" href="#formulario">Começar simulação</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      Atendimento Ademicon • Integração ativa para o número <strong>+55 81 92002-3267</strong>
     </div>
-  </footer>
 
-  <a class="floating-whatsapp" href="#formulario" aria-label="Ir para o formulário">💬</a>
+    <!-- DIREITA FORM -->
+    <div class="hero-form" id="formulario">
 
-  <script>
-    const WHATSAPP_NUMBER = '5581920023267';
-    const TAXAS = {
-      'Imóvel': 0.242,
-      'Veículo': 0.16
-    };
+      <h2>Simule e envie para o WhatsApp</h2>
 
-    const PRAZOS = {
-      'Imóvel': [220, 180],
-      'Veículo': [100, 60]
-    };
+      <input id="nome" placeholder="Nome completo">
 
-    const form = document.getElementById('leadForm');
-    const tipo = document.getElementById('tipo');
-    const prazo = document.getElementById('prazo');
-    const valor = document.getElementById('valor');
-    const resultadoParcela = document.getElementById('resultadoParcela');
-    const previewMensagem = document.getElementById('previewMensagem');
-    const btnCalcular = document.getElementById('btnCalcular');
+      <div class="form-grid">
+        <input id="telefone" placeholder="WhatsApp">
+        <select id="tipo">
+          <option>Imóvel</option>
+          <option>Veículo</option>
+        </select>
+      </div>
 
-    function moeda(v){
-      return Number(v || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    }
+      <div class="form-grid">
+        <input id="valor" placeholder="Valor">
+        <select>
+          <option>220 meses</option>
+          <option>180 meses</option>
+        </select>
+      </div>
 
-    function normalizaValor(v){
-      let numero = Number(v || 0);
-      if(numero > 0 && numero < 1000) numero *= 1000;
-      return numero;
-    }
+      <textarea placeholder="Observações"></textarea>
 
-    function preencherPrazos(){
-      const lista = PRAZOS[tipo.value] || [];
-      prazo.innerHTML = lista.map(item => `<option value="${item}">${item} meses</option>`).join('');
-    }
+      <div class="result-box">
+        <strong>Parcela estimada</strong>
+        <h3 id="resultado">R$ 0,00</h3>
+      </div>
 
-    function calcularParcela(){
-      const valorCredito = normalizaValor(valor.value);
-      const meses = Number(prazo.value || 0);
-      const taxa = TAXAS[tipo.value] || 0;
+      <div class="buttons">
+        <button class="btn btn-secondary" onclick="calcular()">Calcular</button>
+        <button class="btn btn-whatsapp" onclick="enviar()">Enviar WhatsApp</button>
+      </div>
 
-      if(!valorCredito || !meses){
-        resultadoParcela.textContent = 'R$ 0,00';
-        return 0;
-      }
+    </div>
 
-      const parcela = (valorCredito * (1 + taxa)) / meses;
-      resultadoParcela.textContent = moeda(parcela);
-      return parcela;
-    }
+  </div>
+</section>
 
-    function gerarMensagem(){
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const valorCredito = normalizaValor(valor.value);
-      const meses = prazo.value;
-      const observacoes = document.getElementById('observacoes').value.trim();
-      const parcela = calcularParcela();
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <div class="container">
 
-      const linhas = [
-        'Olá! 👋',
-        'Recebi um novo lead pelo site.',
-        '',
-        `👤 Nome: ${nome || '-'}`,
-        `📱 WhatsApp do cliente: ${telefone || '-'}`,
-        `📊 Tipo de simulação: ${tipo.value}`,
-        `💰 Crédito desejado: ${valorCredito ? moeda(valorCredito) : '-'}`,
-        `🗓️ Prazo: ${meses ? meses + ' meses' : '-'}`,
-        `📉 Parcela estimada: ${parcela ? moeda(parcela) : '-'}`
-      ];
+    <h2>Depoimentos</h2>
 
-      if(observacoes){
-        linhas.push(`📝 Observações: ${observacoes}`);
-      }
+    <div class="testimonials-grid">
 
-      linhas.push('', 'Gostaria de continuar o atendimento.');
-      const mensagem = linhas.join('\n');
-      previewMensagem.textContent = mensagem;
-      return mensagem;
-    }
+      <div class="testimonial-card">
+        <strong>Lúcia Mendes</strong>
+        <p>“Fiquei muito satisfeita com a praticidade da simulação. Tudo rápido e profissional.”</p>
+        ★★★★★
+      </div>
 
-    tipo.addEventListener('change', () => {
-      preencherPrazos();
-      gerarMensagem();
-    });
+      <div class="testimonial-card">
+        <strong>João Luiz • Recife / PE</strong>
+        <p>“Simulei meu carro e já falei no WhatsApp. Atendimento excelente.”</p>
+        ★★★★★
+      </div>
 
-    [document.getElementById('nome'), document.getElementById('telefone'), document.getElementById('observacoes'), valor].forEach(el => {
-      el.addEventListener('input', gerarMensagem);
-    });
+    </div>
 
-    prazo.addEventListener('change', gerarMensagem);
-    btnCalcular.addEventListener('click', gerarMensagem);
+  </div>
+</section>
 
-    form.addEventListener('submit', function(event){
-      event.preventDefault();
-      const mensagem = gerarMensagem();
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
-      window.open(url, '_blank');
-    });
+</main>
 
-    preencherPrazos();
-    gerarMensagem();
-  </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>
+function calcular(){
+  let valor = document.getElementById("valor").value;
+  let parcela = valor / 200;
+  document.getElementById("resultado").innerHTML = "R$ " + parcela.toFixed(2);
+}
+
+function enviar(){
+  let nome = document.getElementById("nome").value;
+  let tipo = document.getElementById("tipo").value;
+  let valor = document.getElementById("valor").value;
+
+  let msg = `Olá, meu nome é ${nome}.
+Quero simular ${tipo}.
+Valor: ${valor}`;
+
+  window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
 </body>
 </html>
