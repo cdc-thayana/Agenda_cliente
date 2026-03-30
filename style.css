@@ -95,8 +95,8 @@ main{
 
 .consultora-banner{
   width:100%;
-  max-width:280px;
-  height:420px;
+  max-width:150px;
+  height:300px;
   object-fit:cover;
   margin-top:20px;
   border-radius:16px;
