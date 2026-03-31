@@ -163,78 +163,27 @@
 
 <script>
 
-// 🔄 MUDA PRAZOS AUTOMATICAMENTE
-function atualizarPrazos(){
-
-  let tipo = document.getElementById("tipo").value;
-  let prazoSelect = document.getElementById("prazo");
-
-  prazoSelect.innerHTML = ""; // limpa
-
-  if(tipo === "Imóvel"){
-    let prazos = [220, 180, 100];
-
-    prazos.forEach(p => {
-      let option = document.createElement("option");
-      option.value = p;
-      option.text = p + " meses";
-      prazoSelect.appendChild(option);
-    });
-  }
-
-  if(tipo === "Veículo"){
-    let prazos = [60, 80, 90];
-
-    prazos.forEach(p => {
-      let option = document.createElement("option");
-      option.value = p;
-      option.text = p + " meses";
-      prazoSelect.appendChild(option);
-    });
-  }
-}
-
-
 <script>
-
-// 🔄 ATUALIZA PRAZOS
-function atualizarPrazos(){
-
-  let tipo = document.getElementById("tipo").value;
-  let prazoSelect = document.getElementById("prazo");
+function atualizarPrazos() {
+  const tipo = document.getElementById("tipo").value;
+  const prazoSelect = document.getElementById("prazo");
 
   prazoSelect.innerHTML = "";
 
-  if(tipo === "Imóvel"){
-    let prazos = [220, 180, 100];
+  const prazos = tipo === "Imóvel" ? [220, 180, 100] : [60, 80, 90];
 
-    prazos.forEach(p => {
-      let option = document.createElement("option");
-      option.value = p;
-      option.text = p + " meses";
-      prazoSelect.appendChild(option);
-    });
-  }
-
-  if(tipo === "Veículo"){
-    let prazos = [60, 80, 90];
-
-    prazos.forEach(p => {
-      let option = document.createElement("option");
-      option.value = p;
-      option.text = p + " meses";
-      prazoSelect.appendChild(option);
-    });
-  }
+  prazos.forEach(p => {
+    const option = document.createElement("option");
+    option.value = p;
+    option.textContent = `${p} meses`;
+    prazoSelect.appendChild(option);
+  });
 }
 
+function calcular() {
+  let valorInput = document.getElementById("valor").value.trim();
 
-// 🧮 CALCULAR
-function calcular(){
-
-  let valorInput = document.getElementById("valor").value;
-
-  if(!valorInput){
+  if (!valorInput) {
     alert("Digite um valor");
     return;
   }
@@ -242,56 +191,49 @@ function calcular(){
   valorInput = valorInput.replace(/\./g, "").replace(",", ".");
   let valor = parseFloat(valorInput);
 
-  if(valor <= 1000){
-    valor = valor * 1000;
+  if (isNaN(valor)) {
+    alert("Digite um valor válido");
+    return;
   }
 
-  let tipo = document.getElementById("tipo").value;
-  let prazo = document.getElementById("prazo").value;
+  const tipo = document.getElementById("tipo").value;
+  const prazo = parseInt(document.getElementById("prazo").value);
 
-  if(!prazo){
+  if (!prazo) {
     alert("Selecione o prazo");
     return;
   }
 
-  prazo = parseInt(prazo);
-
-  let taxa = (tipo === "Imóvel") ? 0.242 : 0.162;
-
-  let total = valor + (valor * taxa);
-  let parcela = total / prazo;
+  const taxa = tipo === "Imóvel" ? 0.242 : 0.162;
+  const total = valor + (valor * taxa);
+  const parcela = total / prazo;
 
   document.getElementById("resultado").innerText =
     "R$ " + parcela.toLocaleString("pt-BR", {
-      minimumFractionDigits: 2
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
     });
 }
 
+function enviar() {
+  const nome = document.getElementById("nome").value;
+  const tipo = document.getElementById("tipo").value;
+  const valor = document.getElementById("valor").value;
+  const prazo = document.getElementById("prazo").value;
+  const resultado = document.getElementById("resultado").innerText;
 
-// 📲 WHATSAPP
-function enviar(){
-
-  let nome = document.getElementById("nome").value;
-  let tipo = document.getElementById("tipo").value;
-  let valor = document.getElementById("valor").value;
-
-  let msg = `Olá, meu nome é ${nome}.
+  const msg = `Olá, meu nome é ${nome}.
 Quero simular ${tipo}.
-Valor: ${valor}`;
+Valor: ${valor}
+Prazo: ${prazo} meses
+Parcela estimada: ${resultado}`;
 
   window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
 }
 
-
-// 🚀 GARANTE QUE TUDO CARREGOU
-window.onload = function(){
-
+window.onload = function () {
   atualizarPrazos();
-
-  document
-    .getElementById("tipo")
-    .addEventListener("change", atualizarPrazos);
-
+  document.getElementById("tipo").addEventListener("change", atualizarPrazos);
 };
-
 </script>
+
