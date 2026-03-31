@@ -85,6 +85,37 @@ main{
   margin:15px auto;
   border-radius:12px;
 }
+/* STEPS */
+.steps{
+  margin-top:20px;
+  text-align:left;
+}
+
+.steps h3{
+  margin-bottom:10px;
+}
+
+.step{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:8px 0;
+  font-size:14px;
+}
+
+/* NÚMERO */
+.step span{
+  background:#b31217;
+  color:#fff;
+  width:24px;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
+}
 
 /* IMAGEM LATERAL (STORY) */
 .hero-form{
