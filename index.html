@@ -169,6 +169,12 @@ function calcular(){
     .replace(",", ".");
 
   let valor = parseFloat(valorInput);
+
+  // 🔥 CONVERTE AUTOMÁTICO (100 vira 100.000)
+  if(valor <= 1000){
+    valor = valor * 1000;
+  }
+
   let tipo = document.getElementById("tipo").value;
   let prazo = parseInt(document.getElementById("prazo").value);
 
@@ -179,27 +185,12 @@ function calcular(){
 
   let taxa = 0;
 
-  // IMÓVEL
   if(tipo === "Imóvel"){
     taxa = 0.242;
   }
 
-  // VEÍCULO
   if(tipo === "Veículo"){
     taxa = 0.162;
-
-    let valoresPermitidos = [40000,60000,80000,120000,150000,200000];
-    let prazosPermitidos = [60,80,90];
-
-    if(!valoresPermitidos.includes(valor)){
-      alert("Valores válidos: 40k, 60k, 80k, 120k, 150k ou 200k");
-      return;
-    }
-
-    if(!prazosPermitidos.includes(prazo)){
-      alert("Prazos válidos: 60, 80 ou 90 meses");
-      return;
-    }
   }
 
   let total = valor + (valor * taxa);
@@ -208,19 +199,4 @@ function calcular(){
   document.getElementById("resultado").innerHTML =
     "R$ " + parcela.toLocaleString("pt-BR", {minimumFractionDigits: 2});
 }
-
-function enviar(){
-  let nome = document.getElementById("nome").value;
-  let tipo = document.getElementById("tipo").value;
-  let valor = document.getElementById("valor").value;
-
-  let msg = `Olá, meu nome é ${nome}.
-Quero simular ${tipo}.
-Valor: ${valor}`;
-
-  window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
-}
 </script>
-
-</body>
-</html>
