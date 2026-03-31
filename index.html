@@ -96,6 +96,7 @@
           <select>
             <option>220 meses</option>
             <option>180 meses</option>
+            <option>100 meses</option>
           </select>
         </div>
 
@@ -157,19 +158,33 @@
 
 <script>
 function calcular(){
-  let valor = document.getElementById("valor").value;
-  let parcela = valor / 200;
-  document.getElementById("resultado").innerHTML = "R$ " + parcela.toFixed(2);
+
+  let valor = parseFloat(document.getElementById("valor").value.replace(",", "."));
+  let prazo = 220; // padrão
+
+  let selectPrazo = document.querySelector("select");
+  if(selectPrazo){
+    prazo = parseInt(selectPrazo.value);
+  }
+
+  if(!valor || valor <= 0){
+    alert("Digite um valor válido");
+    return;
+  }
+
+  // taxa 24,2%
+  let taxa = 0.242;
+
+  // valor total com taxa
+  let total = valor + (valor * taxa);
+
+  // parcela
+  let parcela = total / prazo;
+
+  document.getElementById("resultado").innerHTML =
+    "R$ " + parcela.toFixed(2);
 }
-
-function enviar(){
-  let nome = document.getElementById("nome").value;
-  let tipo = document.getElementById("tipo").value;
-  let valor = document.getElementById("valor").value;
-
-  let msg = `Olá, meu nome é ${nome}.
-Quero simular ${tipo}.
-Valor: ${valor}`;
+</script>
 
   window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
 }
