@@ -40,6 +40,17 @@ main{
   color:#fff;
   opacity:0.9;
 }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  width:35px;
+  height:35px;
+  object-fit:contain;
+}
 
 /* GRID */
 .hero-grid{
