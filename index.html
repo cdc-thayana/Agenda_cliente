@@ -34,9 +34,9 @@
     <div class="hero-copy">
 
       <div class="consultora-texto-box">
-  <p class="texto-destaque">Esperamos por você</p>
-  <h3>Presencial ou Online</h3>
-</div>
+        <p class="texto-destaque">Esperamos por você</p>
+        <h3>Presencial ou Online</h3>
+      </div>
 
       <h1>Simule seu crédito e fale direto no WhatsApp</h1>
 
@@ -55,47 +55,52 @@
 
     </div>
 
-    <!-- DIREITA -->
-    <div class="hero-form" id="formulario">
+    <!-- DIREITA COMPLETA -->
+    <div class="hero-right">
 
-      <h2>Simule e envie para o WhatsApp</h2>
+      <!-- FORM -->
+      <div class="hero-form" id="formulario">
 
-      <input id="nome" placeholder="Nome completo">
+        <h2>Simule e envie para o WhatsApp</h2>
 
-      <div class="form-grid">
-        <input id="telefone" placeholder="WhatsApp">
-        <select id="tipo">
-          <option>Imóvel</option>
-          <option>Veículo</option>
-        </select>
+        <input id="nome" placeholder="Nome completo">
+
+        <div class="form-grid">
+          <input id="telefone" placeholder="WhatsApp">
+          <select id="tipo">
+            <option>Imóvel</option>
+            <option>Veículo</option>
+          </select>
+        </div>
+
+        <div class="form-grid">
+          <input id="valor" placeholder="Valor">
+          <select>
+            <option>220 meses</option>
+            <option>180 meses</option>
+          </select>
+        </div>
+
+        <textarea placeholder="Observações"></textarea>
+
+        <div class="result-box">
+          <strong>Parcela estimada</strong>
+          <h3 id="resultado">R$ 0,00</h3>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-secondary" onclick="calcular()">Calcular</button>
+          <button class="btn btn-whatsapp" onclick="enviar()">Enviar WhatsApp</button>
+        </div>
+
       </div>
 
-      <div class="form-grid">
-        <input id="valor" placeholder="Valor">
-        <select>
-          <option>220 meses</option>
-          <option>180 meses</option>
-        </select>
-      </div>
+      <!-- 👇 IMAGEM AGORA NO LUGAR CERTO -->
+      <img class="consultora-banner" src="consultora.png">
 
-      <textarea placeholder="Observações"></textarea>
+    </div>
 
-      <div class="result-box">
-        <strong>Parcela estimada</strong>
-        <h3 id="resultado">R$ 0,00</h3>
-      </div>
-
-      <div class="buttons">
-        <button class="btn btn-secondary" onclick="calcular()">Calcular</button>
-        <button class="btn btn-whatsapp" onclick="enviar()">Enviar WhatsApp</button>
-      </div>
-
-       </div>
-    <!-- 👇 AQUI NO FINAL -->
-  <img class="consultora-banner" src="consultora.png">
   </div>
-
-  
 </section>
 
 <section class="testimonials">
@@ -106,7 +111,7 @@
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
-        <strong>Lúcia Mendes</strong>
+        <strong>Clarisse Fagundes</strong>
         <p>“Fiquei muito satisfeita com a praticidade da simulação. Tudo rápido e profissional.”</p>
         ★★★★★
       </div>
