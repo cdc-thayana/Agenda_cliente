@@ -159,31 +159,72 @@
 <script>
 function calcular(){
 
-  let valor = parseFloat(document.getElementById("valor").value.replace(",", "."));
-  let prazo = 220; // padrão
+  let valorInput = document.getElementById("valor").value
+    .replace(/\./g, "")
+    .replace(",", ".");
 
-  let selectPrazo = document.querySelector("select");
-  if(selectPrazo){
-    prazo = parseInt(selectPrazo.value);
-  }
+  let valor = parseFloat(valorInput);
+  let tipo = document.getElementById("tipo").value;
+  let prazo = parseInt(document.getElementById("prazo").value);
 
   if(!valor || valor <= 0){
     alert("Digite um valor válido");
     return;
   }
 
-  // taxa 24,2%
-  let taxa = 0.242;
+  let taxa = 0;
 
-  // valor total com taxa
+  // 🏠 IMÓVEL
+  if(tipo === "Imóvel"){
+    taxa = 0.242;
+  }
+
+  // 🚗 VEÍCULO
+  if(tipo === "Veículo"){
+
+    taxa = 0.162;
+
+    // valores permitidos
+    let valoresPermitidos = [40000,60000,80000,120000,150000,200000];
+
+    if(!valoresPermitidos.includes(valor)){
+      alert("Para veículos, utilize valores: 40 mil, 60 mil, 80 mil, 120 mil, 150 mil ou 200 mil");
+      return;
+    }
+
+    // prazos permitidos
+    let prazosPermitidos = [60,80,90];
+
+    if(!prazosPermitidos.includes(prazo)){
+      alert("Para veículos, utilize prazos: 60, 80 ou 90 meses");
+      return;
+    }
+  }
+
+  // cálculo
   let total = valor + (valor * taxa);
-
-  // parcela
   let parcela = total / prazo;
 
   document.getElementById("resultado").innerHTML =
-    "R$ " + parcela.toFixed(2);
+    "R$ " + parcela.toLocaleString("pt-BR", {minimumFractionDigits: 2});
 }
+
+
+// WHATSAPP
+function enviar(){
+
+  let nome = document.getElementById("nome").value;
+  let tipo = document.getElementById("tipo").value;
+  let valor = document.getElementById("valor").value;
+
+  let msg = `Olá, meu nome é ${nome}.
+Quero simular ${tipo}.
+Valor: ${valor}`;
+
+  window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
+}
+</script>
+  
 </script>
 
   window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
