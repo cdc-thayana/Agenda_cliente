@@ -179,34 +179,29 @@ function calcular(){
 
   let taxa = 0;
 
-  // 🏠 IMÓVEL
+  // IMÓVEL
   if(tipo === "Imóvel"){
     taxa = 0.242;
   }
 
-  // 🚗 VEÍCULO
+  // VEÍCULO
   if(tipo === "Veículo"){
-
     taxa = 0.162;
 
-    // valores permitidos
     let valoresPermitidos = [40000,60000,80000,120000,150000,200000];
+    let prazosPermitidos = [60,80,90];
 
     if(!valoresPermitidos.includes(valor)){
-      alert("Para veículos, utilize valores: 40 mil, 60 mil, 80 mil, 120 mil, 150 mil ou 200 mil");
+      alert("Valores válidos: 40k, 60k, 80k, 120k, 150k ou 200k");
       return;
     }
 
-    // prazos permitidos
-    let prazosPermitidos = [60,80,90];
-
     if(!prazosPermitidos.includes(prazo)){
-      alert("Para veículos, utilize prazos: 60, 80 ou 90 meses");
+      alert("Prazos válidos: 60, 80 ou 90 meses");
       return;
     }
   }
 
-  // cálculo
   let total = valor + (valor * taxa);
   let parcela = total / prazo;
 
@@ -214,10 +209,7 @@ function calcular(){
     "R$ " + parcela.toLocaleString("pt-BR", {minimumFractionDigits: 2});
 }
 
-
-// WHATSAPP
 function enviar(){
-
   let nome = document.getElementById("nome").value;
   let tipo = document.getElementById("tipo").value;
   let valor = document.getElementById("valor").value;
@@ -225,12 +217,6 @@ function enviar(){
   let msg = `Olá, meu nome é ${nome}.
 Quero simular ${tipo}.
 Valor: ${valor}`;
-
-  window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
-}
-</script>
-  
-</script>
 
   window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
 }
