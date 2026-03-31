@@ -1,239 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultoria de Crédito Planejado</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simule seu crédito planejado para imóvel ou veículo e fale direto no WhatsApp com atendimento rápido e profissional.">
+  <title>Consultoria de Crédito Planejado</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="logo.png" class="logo" alt="Logo da Consultoria de Crédito Planejado">
 
-    <div class="brand">
-
-  <!-- LOGO -->
-  <img src="logo.png" class="logo">
-
-  <!-- TEXTO -->
-  <div>
-    <div class="brand-title">Consultoria de Crédito Planejado</div>
-    <div class="brand-subtitle">Simulação rápida via WhatsApp</div>
-  </div>
-
-</div>
-
-    <a class="btn btn-primary" href="#formulario">Simular agora</a>
-
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="container hero-grid">
-
-    <!-- ESQUERDA -->
-    <div class="hero-copy">
-
-      <div class="consultora-texto-box">
-        <p class="texto-destaque">Esperamos por você</p>
-        <h3>Presencial ou Online</h3>
+        <div>
+          <div class="brand-title">Consultoria de Crédito Planejado</div>
+          <div class="brand-subtitle">Simulação rápida via WhatsApp</div>
+        </div>
       </div>
 
-      <h1>Simule seu crédito e fale direto no WhatsApp</h1>
-
-      <img class="img-box" src="imovel1.png">
-      <img class="img-box" src="veiculo.png">
-
-      <div class="steps">
-  <h3>Como funciona</h3>
-
-  <div class="step">
-    <span>1</span> Preencha seus dados
-  </div>
-
-  <div class="step">
-    <span>2</span> Escolha imóvel ou veículo
-  </div>
-
-  <div class="step">
-    <span>3</span> Informe o valor
-  </div>
-
-  <div class="step">
-    <span>4</span> Veja a simulação
-  </div>
-
-  <div class="step">
-    <span>5</span> Clique no botão
-  </div>
-
-  <div class="step">
-    <span>6</span> Fale no WhatsApp
-  </div>
-</div>
-
+      <a class="btn btn-primary" href="#formulario">Simular agora</a>
     </div>
+  </header>
 
-    <!-- DIREITA COMPLETA -->
-    <div class="hero-right">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
 
-      <!-- FORM -->
-      <div class="hero-form" id="formulario">
+        <div class="hero-copy">
+          <div class="consultora-texto-box">
+            <p class="texto-destaque">Esperamos por você</p>
+            <h3>Presencial ou Online</h3>
+          </div>
 
-        <h2>Simule e envie para o WhatsApp</h2>
+          <h1>Simule seu crédito e fale direto no WhatsApp</h1>
+          <p class="hero-description">
+            Descubra uma estimativa de parcela para crédito planejado de imóvel ou veículo
+            e envie sua simulação diretamente para atendimento no WhatsApp.
+          </p>
 
-        <input id="nome" placeholder="Nome completo">
+          <img class="img-box" src="imovel1.png" alt="Imagem ilustrativa de imóvel">
+          <img class="img-box" src="veiculo.png" alt="Imagem ilustrativa de veículo">
 
-        <div class="form-grid">
-          <input id="telefone" placeholder="WhatsApp">
-          <select id="tipo">
-            <option>Imóvel</option>
-            <option>Veículo</option>
-          </select>
+          <div class="steps">
+            <h3>Como funciona</h3>
+
+            <div class="step"><span>1</span> Preencha seus dados</div>
+            <div class="step"><span>2</span> Escolha imóvel ou veículo</div>
+            <div class="step"><span>3</span> Informe o valor</div>
+            <div class="step"><span>4</span> Veja a simulação</div>
+            <div class="step"><span>5</span> Clique no botão</div>
+            <div class="step"><span>6</span> Fale no WhatsApp</div>
+          </div>
         </div>
 
-        <div class="form-grid">
-          <input id="valor" placeholder="Valor">
-          <select>
-            <option>220 meses</option>
-            <option>180 meses</option>
-            <option>100 meses</option>
-          </select>
-        </div>
+        <div class="hero-right">
+          <form class="hero-form" id="formulario" onsubmit="return false;">
+            <h2>Simule e envie para o WhatsApp</h2>
 
-        <textarea placeholder="Observações"></textarea>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required>
 
-        <div class="result-box">
-          <strong>Parcela estimada</strong>
-          <h3 id="resultado">R$ 0,00</h3>
-        </div>
+            <div class="form-grid">
+              <div>
+                <label for="telefone">WhatsApp</label>
+                <input type="tel" id="telefone" placeholder="(81) 99999-9999" inputmode="tel">
+              </div>
 
-        <div class="buttons">
-          <button class="btn btn-secondary" onclick="calcular()">Calcular</button>
-          <button class="btn btn-whatsapp" onclick="enviar()">Enviar WhatsApp</button>
+              <div>
+                <label for="tipo">Tipo de crédito</label>
+                <select id="tipo">
+                  <option value="Imóvel">Imóvel</option>
+                  <option value="Veículo">Veículo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div>
+                <label for="valor">Valor desejado</label>
+                <input type="text" id="valor" placeholder="Ex.: 150000" inputmode="numeric">
+              </div>
+
+              <div>
+                <label for="prazo">Prazo</label>
+                <select id="prazo"></select>
+              </div>
+            </div>
+
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" placeholder="Escreva alguma informação adicional, se desejar"></textarea>
+
+            <div class="result-box" aria-live="polite">
+              <strong>Parcela estimada</strong>
+              <h3 id="resultado">R$ 0,00</h3>
+              <p class="result-note">Valor meramente estimativo para atendimento inicial.</p>
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="btn btn-secondary" id="btnCalcular">Calcular</button>
+              <button type="button" class="btn btn-whatsapp" id="btnWhatsapp">Enviar WhatsApp</button>
+            </div>
+          </form>
+
+          <img class="consultora-banner" src="consultora.png" alt="Consultora responsável pelo atendimento">
         </div>
 
       </div>
+    </section>
 
-      <!-- 👇 IMAGEM AGORA NO LUGAR CERTO -->
-      <img class="consultora-banner" src="consultora.png">
+    <section class="testimonials">
+      <div class="container">
+        <h2>Depoimentos de Clientes</h2>
 
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <strong>Clarisse Fagundes</strong>
+            <p>“Fiquei muito satisfeita com a praticidade da simulação. Tudo rápido e profissional.”</p>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <div class="testimonial-card">
+            <strong>João Luiz • Recife / PE</strong>
+            <p>“Simulei meu carro e já falei no WhatsApp. Atendimento excelente.”</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Consultoria Thayana Vilaça</p>
+      <p>Agenda: (81) 92002-3267</p>
+      <p>E-mail: consultoriathayanavilaca@gmail.com</p>
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    function atualizarPrazos() {
+      const tipo = document.getElementById("tipo").value;
+      const prazoSelect = document.getElementById("prazo");
 
-<section class="testimonials">
-  <div class="container">
+      prazoSelect.innerHTML = "";
 
-    <h2>Depoimentos de Clientes</h2>
+      const prazos = tipo === "Imóvel" ? [220, 180, 100] : [90, 80, 60];
 
-    <div class="testimonials-grid">
+      prazos.forEach(function(prazo) {
+        const option = document.createElement("option");
+        option.value = prazo;
+        option.textContent = prazo + " meses";
+        prazoSelect.appendChild(option);
+      });
+    }
 
-      <div class="testimonial-card">
-        <strong>Clarisse Fagundes</strong>
-        <p>“Fiquei muito satisfeita com a praticidade da simulação. Tudo rápido e profissional.”</p>
-        ★★★★★
-      </div>
+    function obterValorNumerico() {
+      let valorInput = document.getElementById("valor").value.trim();
 
-      <div class="testimonial-card">
-        <strong>João Luiz • Recife / PE</strong>
-        <p>“Simulei meu carro e já falei no WhatsApp. Atendimento excelente.”</p>
-        ★★★★★
-      </div>
+      if (!valorInput) return NaN;
 
-    </div>
+      valorInput = valorInput
+        .replace(/R\$/g, "")
+        .replace(/\s/g, "")
+        .replace(/\./g, "")
+        .replace(",", ".");
 
-  </div>
-</section>
+      return parseFloat(valorInput);
+    }
 
-</main>
+    function formatarMoeda(valor) {
+      return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+      });
+    }
 
-<footer class="rodape">
-  <div class="container">
-    <p>Consultoria Thayana Vilaça</p>
-    <p>Agenda: (81) 92002-3267</p>
-    <p>E-mail: consultoriathayanavilaca@gmail.com</p>
-  </div>
-</footer>
+    function calcular() {
+      const valor = obterValorNumerico();
+      const tipo = document.getElementById("tipo").value;
+      const prazo = parseInt(document.getElementById("prazo").value, 10);
 
-<script>
+      if (isNaN(valor) || valor <= 0) {
+        alert("Digite um valor válido para simulação.");
+        document.getElementById("valor").focus();
+        return;
+      }
 
-<script>
-function atualizarPrazos() {
-  const tipo = document.getElementById("tipo").value;
-  const prazoSelect = document.getElementById("prazo");
+      if (!prazo) {
+        alert("Selecione um prazo.");
+        document.getElementById("prazo").focus();
+        return;
+      }
 
-  prazoSelect.innerHTML = "";
+      const taxa = tipo === "Imóvel" ? 0.242 : 0.162;
+      const total = valor + (valor * taxa);
+      const parcela = total / prazo;
 
-  const prazos = tipo === "Imóvel" ? [220, 180, 100] : [60, 80, 90];
+      document.getElementById("resultado").textContent = formatarMoeda(parcela);
+    }
 
-  prazos.forEach(p => {
-    const option = document.createElement("option");
-    option.value = p;
-    option.textContent = `${p} meses`;
-    prazoSelect.appendChild(option);
-  });
-}
+    function enviar() {
+      const nome = document.getElementById("nome").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const tipo = document.getElementById("tipo").value;
+      const valor = document.getElementById("valor").value.trim();
+      const prazo = document.getElementById("prazo").value;
+      const observacoes = document.getElementById("observacoes").value.trim();
+      const resultado = document.getElementById("resultado").textContent.trim();
 
-function calcular() {
-  let valorInput = document.getElementById("valor").value.trim();
+      if (!nome) {
+        alert("Por favor, preencha seu nome.");
+        document.getElementById("nome").focus();
+        return;
+      }
 
-  if (!valorInput) {
-    alert("Digite um valor");
-    return;
-  }
+      const valorNumerico = obterValorNumerico();
+      if (isNaN(valorNumerico) || valorNumerico <= 0) {
+        alert("Digite um valor válido antes de enviar.");
+        document.getElementById("valor").focus();
+        return;
+      }
 
-  valorInput = valorInput.replace(/\./g, "").replace(",", ".");
-  let valor = parseFloat(valorInput);
+      if (resultado === "R$ 0,00") {
+        calcular();
+      }
 
-  if (isNaN(valor)) {
-    alert("Digite um valor válido");
-    return;
-  }
+      const mensagem =
+`Olá! Meu nome é ${nome}.
+Quero simular um crédito para ${tipo}.
 
-  const tipo = document.getElementById("tipo").value;
-  const prazo = parseInt(document.getElementById("prazo").value);
-
-  if (!prazo) {
-    alert("Selecione o prazo");
-    return;
-  }
-
-  const taxa = tipo === "Imóvel" ? 0.242 : 0.162;
-  const total = valor + (valor * taxa);
-  const parcela = total / prazo;
-
-  document.getElementById("resultado").innerText =
-    "R$ " + parcela.toLocaleString("pt-BR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    });
-}
-
-function enviar() {
-  const nome = document.getElementById("nome").value;
-  const tipo = document.getElementById("tipo").value;
-  const valor = document.getElementById("valor").value;
-  const prazo = document.getElementById("prazo").value;
-  const resultado = document.getElementById("resultado").innerText;
-
-  const msg = `Olá, meu nome é ${nome}.
-Quero simular ${tipo}.
-Valor: ${valor}
+WhatsApp: ${telefone || "Não informado"}
+Valor desejado: ${valor}
 Prazo: ${prazo} meses
-Parcela estimada: ${resultado}`;
+Parcela estimada: ${document.getElementById("resultado").textContent}
 
-  window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(msg)}`);
-}
+Observações: ${observacoes || "Nenhuma"}`;
 
-window.onload = function () {
-  atualizarPrazos();
-  document.getElementById("tipo").addEventListener("change", atualizarPrazos);
-};
-</script>
+      window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(mensagem)}`, "_blank");
+    }
 
+    document.addEventListener("DOMContentLoaded", function() {
+      atualizarPrazos();
+
+      document.getElementById("tipo").addEventListener("change", atualizarPrazos);
+      document.getElementById("btnCalcular").addEventListener("click", calcular);
+      document.getElementById("btnWhatsapp").addEventListener("click", enviar);
+    });
+  </script>
+
+</body>
+</html>
