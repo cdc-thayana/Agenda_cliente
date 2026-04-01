@@ -302,9 +302,11 @@ textarea{
 }
 
 .btn-primary{
+  .btn-primary{
   background:#fff;
   color:#b31217;
-  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  box-shadow:0 8px 20px rgba(0,0,0,0.14);
+  font-weight:800;
 }
 
 .btn-secondary{
