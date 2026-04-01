@@ -35,7 +35,7 @@ img{
 /* TOPO */
 .topbar{
   background:linear-gradient(90deg,#7e0c10,#b31217,#7e0c10);
-  padding:15px 0;
+  padding:25px 0; /* AQUI resolve */
   box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
@@ -53,10 +53,9 @@ img{
 }
 
 .logo{
-  width:100px;
-  height:100px;
+ width:140px;
+  height:auto;
   object-fit:contain;
-  align-items:center;
 }
 
 .brand-title{
