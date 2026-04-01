@@ -472,11 +472,11 @@ textarea{
 
   .result-box h3{
     font-size:1.5rem;
-    
-    /* CENTRALIZAR TÍTULOS */
+  }
+}
+
+/* CENTRALIZAR TÍTULOS */
 .testimonials h2,
 .videos-consorcio h2{
   text-align:center;
-
-  }
 }
