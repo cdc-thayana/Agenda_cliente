@@ -79,13 +79,14 @@ img{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
-  align-items:start;
+  align-items:stretch; /* MUITO IMPORTANTE */
 }
 
 .hero-right{
-  display:flex;
+ display:flex;
   flex-direction:column;
   gap:20px;
+  height:100%;
 }
 
 .hero-copy,
