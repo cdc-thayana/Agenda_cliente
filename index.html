@@ -271,7 +271,7 @@ Observações: ${observacoes || "Nenhuma"}`;
       window.open(`https://wa.me/5581920023267?text=${encodeURIComponent(mensagem)}`, "_blank");
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
+       document.addEventListener("DOMContentLoaded", function() {
       atualizarPrazos();
 
       document.getElementById("tipo").addEventListener("change", atualizarPrazos);
@@ -279,3 +279,5 @@ Observações: ${observacoes || "Nenhuma"}`;
       document.getElementById("btnWhatsapp").addEventListener("click", enviar);
     });
   </script>
+</body>
+</html>
